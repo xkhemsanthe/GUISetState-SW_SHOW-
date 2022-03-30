@@ -1,0 +1,2 @@
+# GUISetState-SW_SHOW-
+GUICtrlCreateButton("load GUI TWO", 8, 8, 100)     GUICtrlSetOnEvent(-1, "LoadGuiTwoFromGuiOne")     GUISetState(@SW_SHOW)      While 1 ; Loop until the user exits.         Sleep(100) ;~      If $iLoadGuiTwo Then ; .......... solution 1 ;~          Example2($hGUIParent1) ; .... ;~          $iLoadGuiTwo = 0 ; .......... ;~      EndIf ; .........................         If $iExitLoop Then ExitLoop     WEnd     $iExitLoop = 0     GUIDelete($hGUIParent1) EndFunc   ;==>Example1
